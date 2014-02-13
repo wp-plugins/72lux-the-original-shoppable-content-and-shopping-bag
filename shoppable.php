@@ -102,7 +102,7 @@ function shple_widget_init (){
 
 // Add menu page
 function shple_add_settings_page() {
-  add_options_page( 'Shoppable Frames Configurations Page', 'Shoppable', 'manage_options', __FILE__, 'shple_render_help_settings' );
+  add_options_page( 'Shoppable Frames Configurations Page', 'Shoppable', 'manage_options', 'shoppable', 'shple_render_help_settings' );
 }
 
 // ------------------------------------------------------------------------------
@@ -201,7 +201,7 @@ function shple_validate_options ( $input ) {
 function shple_plugin_action_links ( $links, $file ) {
 
   if ( $file == plugin_basename( __FILE__ ) ) {
-    $shple_links = '<a href="'.get_admin_url().'options-general.php?page=shoppable/shoppable.php">'.__('Settings').'</a>';
+    $shple_links = '<a href="'.get_admin_url().'options-general.php?page=shoppable">'.__('Settings').'</a>';
     // make the 'Settings' link appear first
     array_unshift( $links, $shple_links );
   }
