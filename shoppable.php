@@ -247,7 +247,7 @@ function shple_shortcode_button_init() {
 //This callback registers our plug-in
 function shple_register_tinymce_plugin($plugin_array) {
   # JOE: Not sure if this is the best way to do dis
-  $plugin_array['shple_button'] = plugin_dir_url('') . 'shoppable/assets/js/shortcode.js';
+  $plugin_array['shple_button'] = plugin_dir_url('') . '72lux-the-original-shoppable-content-and-shopping-bag/assets/js/shortcode.js';
   return $plugin_array;
 }
 
@@ -284,7 +284,7 @@ add_shortcode( 'shoppable_frame', 'shple_shoppable_frame_shortcode' );
 function shple_inject_shopjs_script () {
   if(!is_admin()) {
     $options = get_option('shple_options');
-    $src = plugin_dir_url('') . 'shoppable/assets/js/shop.min.js';
+    $src = plugin_dir_url('') . '72lux-the-original-shoppable-content-and-shopping-bag/assets/js/shop.min.js';
     $string = "<script id='lux-shop-loader' src='" . $src . "?token=" . $options['token'] . "'></script>";
     echo $string;
   }
@@ -292,7 +292,7 @@ function shple_inject_shopjs_script () {
 
 // inject styles
 function shple_inject_css() {
-  wp_enqueue_style('shoppable_styles', plugin_dir_url('') . 'shoppable/assets/css/shop.css');
+  wp_enqueue_style('shoppable_styles', plugin_dir_url('') . '72lux-the-original-shoppable-content-and-shopping-bag/assets/css/shop.css');
 }
 
 
